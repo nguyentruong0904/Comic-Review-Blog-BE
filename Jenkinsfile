@@ -9,7 +9,7 @@ pipeline {
   stages {
     stage('Clone source') {
       steps {
-        git 'https://github.com/letmehear159/OOSE_Blog_Comic_BackEnd.git'
+        git 'https://github.com/nguyentruong0904/Comic-Review-Blog-BE.git'
       }
     }
 
