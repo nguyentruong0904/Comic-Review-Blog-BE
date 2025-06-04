@@ -36,8 +36,11 @@ pipeline {
 
     stage('Build Native Image') {
       steps {
+//         sh '''
+//           bash -c "set -a && source .env && set +a && ./mvnw -Pnative native:compile -DskipTests"
+//         '''
         sh '''
-          bash -c "set -a && source .env && set +a && ./mvnw -Pnative native:compile -DskipTests"
+          bash -c "set -a && source .env && set +a && ./mvnw package"
         '''
       }
     }
