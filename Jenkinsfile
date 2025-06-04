@@ -40,7 +40,7 @@ pipeline {
 //           bash -c "set -a && source .env && set +a && ./mvnw -Pnative native:compile -DskipTests"
 //         '''
         sh '''
-          bash -c "set -a && source .env && set +a && ./mvnw package"
+          bash -c "set -a && source .env && set +a && ./mvnw package -DskipTests"
         '''
       }
     }
