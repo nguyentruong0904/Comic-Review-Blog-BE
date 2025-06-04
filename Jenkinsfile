@@ -24,6 +24,16 @@ pipeline {
       }
     }
 
+    stage('Check env') {
+      steps {
+        sh '''
+          echo "JAVA_HOME=$JAVA_HOME"
+          echo "PATH=$PATH"
+          which native-image || echo "native-image NOT found"
+        '''
+      }
+    }
+
     stage('Build Native Image') {
       steps {
         sh '''
